@@ -268,7 +268,7 @@ Default value for
 				/* İmaj yüklendiğinde hesaplamaları yapmak ve stilleri yaratmak için ilgili fonksiyona yönlendir */
 				setImage($('#imgfix_wrapper_layer_' + family.id + '_' + i + ' .imgfix_src_img')[0]);
 				if(virgin) {
-					$('#imgfix_wrapper_layer_' + family.id + '_' + i + ' .imgfix_src_img').load(function(){
+					$('#imgfix_wrapper_layer_' + family.id + '_' + i + ' .imgfix_src_img').on('load', function () {
 						setImage(this);
 					});
 				}
